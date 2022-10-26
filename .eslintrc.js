@@ -1,33 +1,14 @@
 module.exports = {
-	'env': {
-		'browser': true,
-		'amd': true,
-		'node': true
-	},
-	'extends': ['eslint:recommended', 'plugin:sonarjs/recommended'],
-	'overrides': [
-	],
-	'parserOptions': {
-		'ecmaVersion': 'latest',
-		'sourceType': 'module'
-	},
-	'plugins': ['sonarjs'],
-	'rules': {
-		'indent': [
-			'error',
-			'tab'
-		],
-		'linebreak-style': [
-			'error',
-			'unix'
-		],
-		'quotes': [
-			'error',
-			'single'
-		],
-		'semi': [
-			'error',
-			'always'
-		]
-	}
-};
+  env: {
+    node: true,
+    es2021: true,
+  },
+  extends: ['standard', 'plugin:sonarjs/recommended', 'prettier'],
+  overrides: [],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['sonarjs'],
+  rules: {},
+}

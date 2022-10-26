@@ -1,20 +1,18 @@
 name: Nodejs Labs Actions
-on: [push]
+on: push
 jobs:
-  build:
+  preview:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [ 12.x, 14.x ]
     steps:
-      - uses: actions/checkout@v2
-      - name: Node.js version - ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 16
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
         run: npm install
       - name: Running Prettier
         run: npx prettier --check .
       - name: Running ESLint
-        run: npx eslint *
+        run: npx eslint .
