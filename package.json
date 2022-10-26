@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-labs",
+  "version": "1.0.0",
+  "description": "Node.js labs",
+  "main": "index.js",
+  "scripts": {
+    "lint:fix": "eslint --fix ./*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M1rov/nodejs-labs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/M1rov/nodejs-labs/issues"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^8.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.26.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-sonarjs": "^0.16.0"
+  },
+  "homepage": "https://github.com/M1rov/nodejs-labs#readme"
+}
