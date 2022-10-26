@@ -4,7 +4,9 @@
   "description": "Node.js labs",
   "main": "index.js",
   "scripts": {
-    "lint:fix": "eslint --fix ./*.js"
+    "lint:fix": "eslint --fix ./*.js",
+    "prepare": "husky install",
+    "test": "npm run lint && npm run format"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
     "eslint-plugin-n": "^15.3.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-sonarjs": "^0.16.0",
+    "husky": "^8.0.1",
     "prettier": "2.7.1"
   },
   "homepage": "https://github.com/M1rov/nodejs-labs#readme"
