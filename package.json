@@ -2,11 +2,12 @@
   "name": "nodejs-labs",
   "version": "1.0.0",
   "description": "Node.js labs",
-  "main": "index.js",
+  "main": "api/index.js",
   "scripts": {
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "eslint --fix ./*.js",
     "format": "prettier --ignore-path .gitignore --check .",
+    "format:fix": "prettier --write . --ignore-path .gitignore",
     "prepare": "husky install",
     "test": "npm run lint && npm run format"
   },
@@ -19,16 +20,13 @@
   "bugs": {
     "url": "https://github.com/M1rov/nodejs-labs/issues"
   },
-  "dependencies": {
-    "eslint-config-prettier": "^8.5.0"
-  },
   "devDependencies": {
     "eslint": "^8.26.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.3.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-sonarjs": "^0.16.0",
+    "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.1",
     "prettier": "2.7.1"
   },
