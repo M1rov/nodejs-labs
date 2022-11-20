@@ -16,6 +16,7 @@
   },
   "author": "",
   "license": "ISC",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/M1rov/nodejs-labs/issues"
   },
