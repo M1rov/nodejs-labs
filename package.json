@@ -8,8 +8,7 @@
     "lint:fix": "eslint --fix ./*.js",
     "format": "prettier --ignore-path .gitignore --check .",
     "format:fix": "prettier --write . --ignore-path .gitignore",
-    "prepare": "husky install",
-    "test": "npm run lint && npm run format"
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -23,8 +22,6 @@
   "devDependencies": {
     "eslint": "^8.26.0",
     "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-sonarjs": "^0.16.0",
     "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.1",
