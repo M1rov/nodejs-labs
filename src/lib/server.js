@@ -7,13 +7,10 @@ export default class server {
 
   connections = new Map()
 
-  constructor(longResponseMs = 100000) {
-    this.httpServer = http.createServer((_req, res) => {
+  constructor() {
+    this.httpServer = http.createServer((req, res) => {
       if (!res.socket) return
       this.connections.set(res.socket, res)
-      setTimeout(() => {
-        server.send(res, 'Server Timeout', 'json', 503)
-      }, longResponseMs)
     })
 
     this.httpServer.on('connection', (socket) => {
@@ -56,8 +53,8 @@ export default class server {
 
   static send(res, data, type = 'json', statusCode = 200) {
     if (!(type in contentTypes)) {
-      res.writeHead(500).write('Unsupported content type!')
-      res.end()
+      console.error('Unsupported response type!')
+      res.writeHead(500)
       return
     }
 
