@@ -11,7 +11,7 @@ export default class {
 
     const routeHandlers = this.handlers[path]?.[method]
     if (!routeHandlers || routeHandlers.length === 0) {
-      server.send(res, 'Not found', 'json', 404)
+      server.send(res, 'This path is not exists!', 'json', 404)
       return
     }
 

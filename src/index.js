@@ -1,14 +1,14 @@
 import Server from './lib/server'
-import router from './routes/index'
+import routes from './routes/index'
 
-const PORT = parseInt(process.env.PORT || '8080')
+const PORT = parseInt(process.env.PORT || '4000')
 
 const server = new Server()
 
-server.use(router).listen(PORT, () => {
+server.use(routes).listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`)
 })
 
-process.on('SIGINT', async () => {
+process.on('SIGTERM', async () => {
   await server.shutdown()
 })
