@@ -1,4 +1,4 @@
-import Router from '../lib/router'
+import Router from '../lib/router.js'
 import server from '../lib/server.js'
 
 const router = new Router()

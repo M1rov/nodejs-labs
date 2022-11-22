@@ -1,5 +1,5 @@
-import Server from './lib/server'
-import routes from './routes/index'
+import Server from './lib/server.js'
+import routes from './routes/index.js'
 
 const PORT = parseInt(process.env.PORT || '4000')
 

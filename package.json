@@ -9,7 +9,7 @@
     "format": "prettier --ignore-path .gitignore --check .",
     "format:fix": "prettier --write . --ignore-path .gitignore",
     "prepare": "husky install",
-    "start": "node --experimental-specifier-resolution=node src/index.js"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",

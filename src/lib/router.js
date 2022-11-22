@@ -1,6 +1,6 @@
 import { URL } from 'url'
 import { httpMethods } from './http-methods.js'
-import server from './server'
+import server from './server.js'
 
 export default class {
   handlers = {}
